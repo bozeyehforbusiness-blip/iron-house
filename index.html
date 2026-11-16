@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Iron House – نادي آيرون هاوس إربد</title>
+<meta name="description" content="نادي آيرون هاوس الرياضي في إربد: أسعار الاشتراكات، جدول الحصص، ساعات السيدات، واحجز حصتك التجريبية مجاناً.">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0c; --bg2:#111113; --card:#17171a; --line:#26262b;
+    --text:#f3f3f1; --muted:#a3a3a8; --lime:#c6ff1a; --lime-d:#9fd400;
+    --r:16px; --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Cairo",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding-bottom:76px;-webkit-font-smoothing:antialiased}
+  body[dir="ltr"]{font-family:"Cairo",system-ui,sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  .lime{color:var(--lime)}
+
+  /* demo ribbon */
+  .ribbon{background:var(--lime);color:#000;font-size:13px;font-weight:700;text-align:center;padding:6px 12px}
+
+  /* header */
+  header{position:sticky;top:0;z-index:20;background:rgba(11,11,12,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+  .logo{font-family:"Bebas Neue",sans-serif;font-size:28px;letter-spacing:1.5px;line-height:1;display:flex;align-items:center;gap:8px}
+  .logo .mark{width:30px;height:30px;border-radius:8px;background:var(--lime);display:grid;place-items:center;color:#000;font-size:20px}
+  .navlinks{display:none;gap:22px;font-weight:600;font-size:15px;color:var(--muted)}
+  .navlinks a:hover{color:var(--text)}
+  .lang{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:6px 14px;font:600 14px "Cairo";cursor:pointer}
+  @media(min-width:860px){.navlinks{display:flex}}
+
+  /* hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;
+    background:linear-gradient(180deg,rgba(11,11,12,.25) 0%,rgba(11,11,12,.55) 45%,var(--bg) 100%),url("img/hero.jpg") center/cover no-repeat, radial-gradient(circle at 70% 20%,#2a3a00 0,#0b0b0c 60%)}
+  .hero .wrap{padding-top:120px;padding-bottom:48px}
+  .tag{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:700;background:rgba(198,255,26,.12);color:var(--lime);border:1px solid rgba(198,255,26,.35);padding:5px 12px;border-radius:999px}
+  .tag i{width:8px;height:8px;border-radius:50%;background:var(--lime);display:inline-block;box-shadow:0 0 0 4px rgba(198,255,26,.2)}
+  .hero h1{font-size:clamp(38px,9vw,72px);line-height:1.1;font-weight:800;margin:16px 0 12px}
+  .hero p.sub{font-size:clamp(16px,2.6vw,19px);color:#d6d6d3;max-width:560px}
+  .hours-strip{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 26px}
+  .chip{background:rgba(23,23,26,.85);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:14px}
+  .chip b{color:var(--lime);font-weight:700}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:14px 22px;font:700 16px "Cairo";cursor:pointer;border:0;transition:transform .15s,background .15s}
+  .btn:active{transform:scale(.97)}
+  .btn-lime{background:var(--lime);color:#000}
+  .btn-lime:hover{background:#d4ff4d}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid #3a3a40}
+  .btn svg{width:20px;height:20px}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px;max-width:520px}
+  .stat{background:rgba(23,23,26,.85);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+  .stat b{display:block;font-family:"Bebas Neue",sans-serif;font-size:32px;color:var(--lime);line-height:1}
+  .stat span{font-size:13px;color:var(--muted)}
+
+  /* sections */
+  section{padding:64px 0}
+  .sec-head{margin-bottom:28px}
+  .kicker{font-family:"Bebas Neue",sans-serif;letter-spacing:2px;color:var(--lime);font-size:18px}
+  .sec-head h2{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.25}
+  .sec-head p{color:var(--muted);margin-top:6px;max-width:620px}
+  .alt{background:var(--bg2);border-block:1px solid var(--line)}
+
+  /* pricing */
+  .plans{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:640px){.plans{grid-template-columns:1fr 1fr}}
+  @media(min-width:980px){.plans{grid-template-columns:repeat(4,1fr)}}
+  .plan{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column}
+  .plan.hot{border-color:var(--lime);box-shadow:0 0 0 1px var(--lime),0 18px 40px -20px rgba(198,255,26,.45)}
+  .badge{position:absolute;top:-12px;inset-inline-start:18px;background:var(--lime);color:#000;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px}
+  .plan h3{font-size:18px;font-weight:700}
+  .price{margin:10px 0 2px;display:flex;align-items:baseline;gap:6px}
+  .price b{font-family:"Bebas Neue",sans-serif;font-size:52px;line-height:1}
+  .price span{color:var(--muted);font-weight:600}
+  .per{color:var(--muted);font-size:13px;min-height:20px}
+  .plan ul{list-style:none;margin:16px 0 20px;display:grid;gap:8px;font-size:15px}
+  .plan li{display:flex;gap:8px;align-items:flex-start}
+  .plan li::before{content:"✓";color:var(--lime);font-weight:800}
+  .plan .btn{margin-top:auto;width:100%}
+  .extras{display:grid;gap:12px;margin-top:16px;grid-template-columns:1fr}
+  @media(min-width:640px){.extras{grid-template-columns:1fr 1fr}}
+  .extra{background:var(--card);border:1px dashed #3a3a40;border-radius:var(--r);padding:16px 18px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+  .extra b{color:var(--lime);white-space:nowrap;font-size:18px}
+  .extra small{display:block;color:var(--muted)}
+
+  /* ladies */
+  .ladies{display:grid;gap:16px;align-items:center;grid-template-columns:1fr;background:linear-gradient(135deg,#1c1424,#17171a);border:1px solid #3b2a4a;border-radius:20px;padding:24px}
+  @media(min-width:760px){.ladies{grid-template-columns:1.3fr 1fr}}
+  .ladies h3{font-size:24px;font-weight:800}
+  .ladies p{color:#cfc8d6}
+  .ladies .times{display:grid;gap:8px}
+  .ladies .t{background:rgba(255,255,255,.05);border:1px solid #3b2a4a;border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;gap:10px}
+  .ladies .t b{color:#f0b6ff}
+
+  /* schedule */
+  .days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:16px;scrollbar-width:none}
+  .days::-webkit-scrollbar{display:none}
+  .day{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:8px 16px;font:700 14px "Cairo";cursor:pointer}
+  .day.on{background:var(--lime);color:#000;border-color:var(--lime)}
+  .classes{display:grid;gap:10px}
+  .cls{display:grid;grid-template-columns:86px 1fr auto;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .cls time{font-family:"Bebas Neue",sans-serif;font-size:24px;color:var(--lime);direction:ltr;text-align:start}
+  .cls h4{font-size:16px;font-weight:700}
+  .cls small{color:var(--muted)}
+  .pill{font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:#24242a;color:var(--muted);white-space:nowrap}
+  .pill.w{background:#2e1f39;color:#f0b6ff}
+
+  /* facilities */
+  .gallery{display:grid;gap:12px;grid-template-columns:1fr}
+  @media(min-width:760px){.gallery{grid-template-columns:repeat(3,1fr)}}
+  .ph{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#1d2a00,#111) center/cover}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.8))}
+  .ph span{position:absolute;bottom:12px;inset-inline-start:14px;z-index:1;font-weight:700}
+  .amen{display:grid;gap:10px;grid-template-columns:repeat(2,1fr);margin-top:14px}
+  @media(min-width:760px){.amen{grid-template-columns:repeat(4,1fr)}}
+  .am{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:center;font-weight:600;font-size:15px}
+  .am .ic{font-size:22px}
+
+  /* trainers */
+  .trainers{display:grid;gap:12px;grid-template-columns:1fr}
+  @media(min-width:760px){.trainers{grid-template-columns:repeat(3,1fr)}}
+  .tr{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;gap:14px;align-items:center}
+  .av{flex:0 0 58px;height:58px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:22px;background:#202024;color:var(--lime);border:2px solid var(--lime)}
+  .tr h4{font-size:17px}
+  .tr small{color:var(--muted);display:block}
+
+  /* reviews */
+  .reviews{display:grid;gap:12px;grid-template-columns:1fr}
+  @media(min-width:760px){.reviews{grid-template-columns:repeat(3,1fr)}}
+  .rv{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+  .stars{color:var(--lime);letter-spacing:2px}
+  .rv p{margin:8px 0 10px}
+  .rv small{color:var(--muted)}
+  .note{font-size:13px;color:var(--muted);margin-top:10px}
+
+  /* faq */
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--lime);font-size:22px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);margin-top:8px}
+
+  /* location */
+  .loc{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:760px){.loc{grid-template-columns:1.2fr 1fr}}
+  .mapcard{border-radius:var(--r);border:1px solid var(--line);min-height:240px;position:relative;overflow:hidden;
+    background:
+      linear-gradient(90deg,transparent 48%,#2a2a30 48% 52%,transparent 52%) 0 0/120px 120px,
+      linear-gradient(0deg,transparent 48%,#2a2a30 48% 52%,transparent 52%) 0 0/120px 120px,
+      linear-gradient(35deg,transparent 46%,#33333a 46% 50%,transparent 50%) 0 0/100% 100%,
+      #17171a;display:grid;place-items:center}
+  .pin{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .pin .dot{width:46px;height:46px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--lime);display:grid;place-items:center;box-shadow:0 10px 30px rgba(198,255,26,.4)}
+  .pin .dot b{transform:rotate(45deg);color:#000;font-family:"Bebas Neue";font-size:22px}
+  .pin span{background:#000;border:1px solid var(--line);padding:4px 10px;border-radius:8px;font-weight:700;font-size:14px}
+  .info{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:12px}
+  .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+  .row:last-of-type{border:0}
+  .row span{color:var(--muted)}
+
+  /* final cta */
+  .final{text-align:center;background:radial-gradient(circle at 50% 0,rgba(198,255,26,.18),transparent 60%),var(--bg2);border-top:1px solid var(--line)}
+  .final h2{font-size:clamp(28px,6vw,44px);font-weight:800;line-height:1.2}
+  .final p{color:var(--muted);margin:8px auto 22px;max-width:520px}
+
+  footer{padding:28px 0 36px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+  footer .wrap{display:grid;gap:8px}
+  .socials{display:flex;gap:10px}
+  .socials a{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;background:var(--card)}
+  .socials svg{width:18px;height:18px;fill:var(--text)}
+
+  /* sticky action bar */
+  .bar{position:fixed;inset-inline:0;bottom:0;z-index:30;background:rgba(11,11,12,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+  .bar .btn{padding:11px 8px;font-size:15px;border-radius:12px}
+  @media(min-width:860px){.bar{inset-inline:auto;inset-inline-end:20px;bottom:20px;border:1px solid var(--line);border-radius:18px;grid-template-columns:auto auto auto;padding:8px}body{padding-bottom:0}}
+
+  /* toast */
+  .toast{position:fixed;inset-inline:16px;bottom:92px;z-index:40;max-width:440px;margin:0 auto;background:#fff;color:#111;border-radius:14px;padding:14px 16px;font-weight:600;box-shadow:0 20px 50px rgba(0,0,0,.5);transform:translateY(20px);opacity:0;pointer-events:none;transition:.25s}
+  .toast.show{opacity:1;transform:none}
+  .toast b{color:#5a7d00}
+</style>
+</head>
+<body>
+
+<div class="ribbon" data-t="ribbon"></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><span class="mark">IH</span>IRON HOUSE</a>
+    <nav class="navlinks">
+      <a href="#prices" data-t="nav_prices"></a>
+      <a href="#schedule" data-t="nav_schedule"></a>
+      <a href="#facilities" data-t="nav_facilities"></a>
+      <a href="#location" data-t="nav_location"></a>
+    </nav>
+    <button class="lang" id="langBtn" type="button">English</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <span class="tag"><i></i><span id="openNow"></span></span>
+      <h1 data-t="hero_title"></h1>
+      <p class="sub" data-t="hero_sub"></p>
+      <div class="hours-strip" id="heroHours"></div>
+      <div class="ctas">
+        <a class="btn btn-lime" data-action="whatsapp" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          <span data-t="cta_trial"></span>
+        </a>
+        <a class="btn btn-ghost" href="#prices" data-t="cta_prices"></a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+  </div>
+
+  <!-- PRICES -->
+  <section id="prices">
+    <div class="wrap">
+      <div class="sec-head"><div class="kicker">MEMBERSHIP</div><h2 data-t="prices_title"></h2><p data-t="prices_sub"></p></div>
+      <div class="plans" id="plans"></div>
+      <div class="extras" id="extras"></div>
+    </div>
+  </section>
+
+  <!-- LADIES -->
+  <section class="alt" style="padding:40px 0">
+    <div class="wrap">
+      <div class="ladies">
+        <div><h3 data-t="ladies_title"></h3><p data-t="ladies_text"></p></div>
+        <div class="times" id="ladiesTimes"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule">
+    <div class="wrap">
+      <div class="sec-head"><div class="kicker">CLASSES</div><h2 data-t="schedule_title"></h2><p data-t="schedule_sub"></p></div>
+      <div class="days" id="days"></div>
+      <div class="classes" id="classes"></div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section id="facilities" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><div class="kicker">THE GYM</div><h2 data-t="fac_title"></h2><p data-t="fac_sub"></p></div>
+      <div class="gallery" id="gallery"></div>
+      <div class="amen" id="amen"></div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><div class="kicker">COACHES</div><h2 data-t="tr_title"></h2></div>
+      <div class="trainers" id="trainers"></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head"><div class="kicker">REVIEWS</div><h2 data-t="rv_title"></h2></div>
+      <div class="reviews" id="reviews"></div>
+      <p class="note" data-t="rv_note"></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap" style="max-width:760px">
+      <div class="sec-head"><div class="kicker">FAQ</div><h2 data-t="faq_title"></h2></div>
+      <div id="faq"></div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><div class="kicker">FIND US</div><h2 data-t="loc_title"></h2></div>
+      <div class="loc">
+        <a class="mapcard" data-action="maps" href="#"><div class="pin"><div class="dot"><b>IH</b></div><span data-t="loc_pin"></span></div></a>
+        <div class="info" id="info"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <h2 data-t="final_title"></h2>
+      <p data-t="final_sub"></p>
+      <a class="btn btn-lime" data-action="whatsapp" href="#" data-t="cta_trial"></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="socials">
+      <a href="#" data-action="instagram" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM21.9 7.1c-.1-1.6-.4-3-1.6-4.2S17.6 1.4 16 1.3C14.3 1.2 9.7 1.2 8 1.3c-1.6.1-3 .4-4.2 1.6S2.2 5.5 2.1 7.1C2 8.8 2 13.3 2.1 15c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.7.1 6.2.1 7.9 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.2-1.7.2-6.2.3-7.9Zm-2.1 9.7a3.3 3.3 0 0 1-1.9 1.9c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4a3.3 3.3 0 0 1-1.9-1.9c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7a3.3 3.3 0 0 1 1.9-1.9c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.3 3.3 0 0 1 1.9 1.9c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7Z"/></svg></a>
+      <a href="#" data-action="facebook" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.3c0-.8.2-1.3 1.4-1.3H17V2h-2.6C11.5 2 10.6 3.6 10.6 6v2H8.5v3h2.1v11H14V11h2.6l.4-3H14Z"/></svg></a>
+    </div>
+    <div>© <span id="yr"></span> Iron House · <span data-t="footer_city"></span></div>
+    <div data-t="footer_demo"></div>
+  </div>
+</footer>
+
+<!-- sticky actions -->
+<div class="bar">
+  <a class="btn btn-ghost" data-action="call" href="#" data-t="bar_call"></a>
+  <a class="btn btn-lime" data-action="whatsapp" href="#" data-t="bar_whatsapp"></a>
+  <a class="btn btn-ghost" data-action="maps" href="#" data-t="bar_maps"></a>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   SITE DATA: everything a client changes lives here.
+   To make a client's site: replace this block, then images in /img.
+   ============================================================ */
+const SITE = {
+  demo: true, // demo site: social buttons explain what they do; Call/WhatsApp go to the site builder (Omar)
+  phone: "+962790666498",
+  whatsapp: "962790666498",
+  instagram: "#", facebook: "#",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=University+Street+Irbid",
+  // opening hours by weekday (0 = Sunday ... 6 = Saturday), 24h "HH:MM"
+  hours: { 0:["06:00","24:00"],1:["06:00","24:00"],2:["06:00","24:00"],3:["06:00","24:00"],4:["06:00","24:00"],5:["14:00","22:00"],6:["06:00","24:00"] },
+  images: { hero:"img/hero.jpg", weights:"img/weights.jpg", cardio:"img/cardio.jpg", studio:"img/studio.jpg" },
+  plans: [
+    { id:"m1", price:25, hot:false },
+    { id:"m3", price:65, hot:true },
+    { id:"m6", price:120, hot:false },
+    { id:"m12", price:210, hot:false }
+  ],
+  // schedule: day index (6 = Saturday first in UI) -> classes
+  schedule: {
+    6:[["07:00","hiit","coach_a",0],["10:00","yoga","coach_l",1],["18:00","strength","coach_a",0],["20:00","boxing","coach_s",0]],
+    0:[["07:00","cardio","coach_s",0],["10:00","zumba","coach_l",1],["19:00","crossfit","coach_a",0]],
+    1:[["07:00","hiit","coach_a",0],["11:00","yoga","coach_l",1],["18:00","strength","coach_a",0],["20:00","boxing","coach_s",0]],
+    2:[["07:00","cardio","coach_s",0],["10:00","zumba","coach_l",1],["19:00","crossfit","coach_a",0]],
+    3:[["07:00","hiit","coach_a",0],["11:00","yoga","coach_l",1],["20:00","boxing","coach_s",0]],
+    4:[["10:00","zumba","coach_l",1],["18:00","strength","coach_a",0]],
+    5:[["16:00","freetr","coach_s",0]]
+  }
+};
+
+const T = {
+ar:{
+  ribbon:"موقع تجريبي لنادٍ وهمي · بدك موقع مثله لناديك؟ اضغط واتساب",
+  nav_prices:"الأسعار", nav_schedule:"الحصص", nav_facilities:"النادي", nav_location:"الموقع",
+  open:"مفتوح الآن", closed:"مغلق الآن · بنفتح ",
+  hero_title:"قوّتك بتبلّش <span class='lime'>من هون.</span>",
+  hero_sub:"نادي رياضي مختلط في قلب إربد، مع ساعات خاصة للسيدات. أجهزة حديثة، مدربين معتمدين، وأجواء بتحمّس.",
+  hh_week:"السبت – الخميس", hh_week_v:"6 ص – 12 م", hh_fri:"الجمعة", hh_fri_v:"2 م – 10 م", hh_ladies:"ساعات السيدات", hh_ladies_v:"يومياً 9 ص – 1 م",
+  cta_trial:"احجز حصتك التجريبية مجاناً", cta_prices:"شوف الأسعار",
+  st1:"جهاز حديث", st2:"مدربين", st3:"تقييم جوجل",
+  prices_title:"اشتراكات واضحة، بدون مفاجآت", prices_sub:"كل الاشتراكات بتشمل الأجهزة والحصص الجماعية واللوكرات. خصم 10% لطلاب الجامعات.",
+  m1:"شهر", m3:"3 أشهر", m6:"6 أشهر", m12:"سنة كاملة", jod:"د.أ", hot:"الأكثر طلباً",
+  per_m3:"يعني 21.7 د.أ بالشهر", per_m6:"يعني 20 د.أ بالشهر", per_m12:"يعني 17.5 د.أ بالشهر",
+  f_all:"كل الأجهزة والأوزان", f_classes:"الحصص الجماعية", f_plan:"برنامج تمارين مجاني", f_inbody:"فحص InBody", f_freeze:"تجميد الاشتراك أسبوعين", f_freeze2:"تجميد الاشتراك شهر", f_pt:"حصتين مع مدرب خاص",
+  choose:"اشترك بهالباقة",
+  ex1:"10 حصص مع مدرب خاص", ex1s:"برنامج تمارين وتغذية على قدّك", ex1p:"60 د.أ",
+  ex2:"دخول يومي", ex2s:"جرّب النادي ليوم كامل", ex2p:"3 د.أ",
+  ladies_title:"ساعات خاصة للسيدات 💜", ladies_text:"صالة كاملة للسيدات مع مدربة، وحصص يوغا وزومبا مخصصة. خصوصية وراحة تامة.",
+  lt1:"كل يوم", lt1v:"9 ص – 1 م", lt2:"حصص السيدات", lt2v:"يوغا · زومبا",
+  schedule_title:"جدول الحصص الأسبوعي", schedule_sub:"اختار اليوم وشوف الحصص. الحصص الجماعية مجانية لكل المشتركين.",
+  d6:"السبت", d0:"الأحد", d1:"الإثنين", d2:"الثلاثاء", d3:"الأربعاء", d4:"الخميس", d5:"الجمعة",
+  hiit:"HIIT حرق دهون", yoga:"يوغا", strength:"تمارين قوة للمبتدئين", boxing:"بوكسينغ", cardio:"كارديو", zumba:"زومبا", crossfit:"كروس فت", freetr:"تدريب حر",
+  coach_a:"كابتن أحمد", coach_l:"كابتن ليلى", coach_s:"كابتن سامر", women:"للسيدات", mixed:"للجميع",
+  fac_title:"كل اللي بتحتاجه بمكان واحد", fac_sub:"مساحة 800 متر، تكييف كامل، وأجهزة بتتجدد باستمرار.",
+  g_weights:"منطقة الأوزان الحرة", g_cardio:"منطقة الكارديو", g_studio:"صالة الحصص الجماعية",
+  a1:"لوكرات وشاورات", a2:"موقف سيارات", a3:"تكييف كامل", a4:"بار بروتين",
+  tr_title:"مدربين بيعرفوا شغلهم",
+  t1:"كابتن أحمد", t1s:"قوة وبناء أجسام · 8 سنين خبرة",
+  t2:"كابتن ليلى", t2s:"لياقة السيدات ويوغا · 6 سنين خبرة",
+  t3:"كابتن سامر", t3s:"بوكسينغ وكارديو · 5 سنين خبرة",
+  rv_title:"شو بيحكوا الأعضاء",
+  r1:"أنظف نادي جربته بإربد، والمدربين فعلاً بيتابعوا معك.", r1n:"محمد · مشترك من سنة",
+  r2:"ساعات السيدات ممتازة ومريحة، وكابتن ليلى رهيبة.", r2n:"رهف · مشتركة 6 أشهر",
+  r3:"الأسعار منطقية وخصم الطلاب بفرق. أنصح فيه.", r3n:"يزن · طالب جامعة",
+  rv_note:"* آراء نموذجية لعرض التصميم. في موقعك الحقيقي بنعرض آراء زباينك من جوجل.",
+  faq_title:"أسئلة بتتكرر",
+  q1:"في حصة تجريبية؟", a1q:"أكيد، أول حصة مجاناً. ابعتلنا على واتساب واحجز الوقت اللي بناسبك.",
+  q2:"شو طرق الدفع؟", a2q:"كاش بالنادي، أو تحويل عن طريق CliQ.",
+  q3:"في خصومات؟", a3q:"خصم 10% لطلاب الجامعات، وعروض خاصة للأصدقاء والعائلة.",
+  loc_title:"موقعنا", loc_pin:"آيرون هاوس · شارع الجامعة",
+  i_addr:"العنوان", i_addr_v:"شارع الجامعة، إربد", i_hours:"الدوام", i_hours_v:"السبت – الخميس 6 ص – 12 م", i_fri:"الجمعة", i_fri_v:"2 م – 10 م", i_phone:"الهاتف",
+  dir:"افتح الاتجاهات على خرائط جوجل",
+  final_title:"أول خطوة أسهل مما بتتخيل.", final_sub:"احجز حصتك التجريبية المجانية اليوم، وخلّي الكابتن يعمللك برنامج على قدّك.",
+  footer_city:"إربد، الأردن",
+  footer_demo:"هذا موقع تجريبي لنادٍ وهمي لعرض التصميم. الصور مولّدة بالذكاء الاصطناعي.",
+  bar_call:"اتصل", bar_whatsapp:"واتساب", bar_maps:"الموقع",
+  demo_whatsapp:"<b>في موقعك الحقيقي:</b> هالزر بيفتح واتساب مباشرة على رقم ناديك، والرسالة مكتوبة جاهزة.",
+  demo_call:"<b>في موقعك الحقيقي:</b> هالزر بيتصل على رقم ناديك بضغطة وحدة.",
+  demo_social:"<b>في موقعك الحقيقي:</b> هالزر بيفتح حساب ناديك.",
+  wa_msg:"مرحبا، شفت موقع آيرون هاوس التجريبي وبدي موقع مثله لناديي",
+  lang:"English"
+},
+en:{
+  ribbon:"Demo site for a fictional gym · Want one for your gym? Tap WhatsApp",
+  nav_prices:"Prices", nav_schedule:"Classes", nav_facilities:"The gym", nav_location:"Location",
+  open:"Open now", closed:"Closed now · opens ",
+  hero_title:"Your strength <span class='lime'>starts here.</span>",
+  hero_sub:"A mixed gym in the heart of Irbid with women-only hours. Modern equipment, certified coaches and a vibe that pushes you.",
+  hh_week:"Sat – Thu", hh_week_v:"6 AM – 12 AM", hh_fri:"Friday", hh_fri_v:"2 PM – 10 PM", hh_ladies:"Women's hours", hh_ladies_v:"Daily 9 AM – 1 PM",
+  cta_trial:"Book your free trial session", cta_prices:"See prices",
+  st1:"Machines", st2:"Coaches", st3:"Google rating",
+  prices_title:"Clear prices, no surprises", prices_sub:"Every plan includes all equipment, group classes and lockers. 10% off for university students.",
+  m1:"1 month", m3:"3 months", m6:"6 months", m12:"1 year", jod:"JOD", hot:"Most popular",
+  per_m3:"That's 21.7 JOD a month", per_m6:"That's 20 JOD a month", per_m12:"That's 17.5 JOD a month",
+  f_all:"All machines and weights", f_classes:"Group classes", f_plan:"Free training plan", f_inbody:"InBody scan", f_freeze:"2-week freeze", f_freeze2:"1-month freeze", f_pt:"2 personal training sessions",
+  choose:"Choose this plan",
+  ex1:"10 personal training sessions", ex1s:"A training and nutrition plan made for you", ex1p:"60 JOD",
+  ex2:"Day pass", ex2s:"Try the gym for a full day", ex2p:"3 JOD",
+  ladies_title:"Women-only hours 💜", ladies_text:"The whole gym for women with a female coach, plus dedicated yoga and Zumba classes. Full privacy and comfort.",
+  lt1:"Every day", lt1v:"9 AM – 1 PM", lt2:"Women's classes", lt2v:"Yoga · Zumba",
+  schedule_title:"Weekly class schedule", schedule_sub:"Pick a day to see its classes. Group classes are free for all members.",
+  d6:"Sat", d0:"Sun", d1:"Mon", d2:"Tue", d3:"Wed", d4:"Thu", d5:"Fri",
+  hiit:"HIIT fat burn", yoga:"Yoga", strength:"Strength for beginners", boxing:"Boxing", cardio:"Cardio", zumba:"Zumba", crossfit:"CrossFit", freetr:"Open training",
+  coach_a:"Coach Ahmad", coach_l:"Coach Layla", coach_s:"Coach Samer", women:"Women", mixed:"Everyone",
+  fac_title:"Everything you need in one place", fac_sub:"800 m² of training space, full air conditioning and equipment that keeps getting upgraded.",
+  g_weights:"Free weights area", g_cardio:"Cardio zone", g_studio:"Group class studio",
+  a1:"Lockers & showers", a2:"Parking", a3:"Air conditioning", a4:"Protein bar",
+  tr_title:"Coaches who know their stuff",
+  t1:"Coach Ahmad", t1s:"Strength & bodybuilding · 8 years",
+  t2:"Coach Layla", t2s:"Women's fitness & yoga · 6 years",
+  t3:"Coach Samer", t3s:"Boxing & cardio · 5 years",
+  rv_title:"What members say",
+  r1:"The cleanest gym I've tried in Irbid, and the coaches really follow up with you.", r1n:"Mohammad · member for 1 year",
+  r2:"The women's hours are great and comfortable, and Coach Layla is amazing.", r2n:"Rahaf · member for 6 months",
+  r3:"Fair prices and the student discount makes a difference. Recommended.", r3n:"Yazan · university student",
+  rv_note:"* Sample reviews for the design demo. Your real site shows your customers' Google reviews.",
+  faq_title:"Common questions",
+  q1:"Is there a free trial?", a1q:"Yes, your first session is free. Message us on WhatsApp to book a time that suits you.",
+  q2:"How can I pay?", a2q:"Cash at the gym, or a CliQ transfer.",
+  q3:"Any discounts?", a3q:"10% off for university students, plus offers for friends and family.",
+  loc_title:"Where to find us", loc_pin:"Iron House · University St.",
+  i_addr:"Address", i_addr_v:"University Street, Irbid", i_hours:"Hours", i_hours_v:"Sat – Thu 6 AM – 12 AM", i_fri:"Friday", i_fri_v:"2 PM – 10 PM", i_phone:"Phone",
+  dir:"Get directions on Google Maps",
+  final_title:"The first step is easier than you think.", final_sub:"Book your free trial today and let a coach build a plan that fits you.",
+  footer_city:"Irbid, Jordan",
+  footer_demo:"This is a demo website for a fictional gym. Images are AI-generated.",
+  bar_call:"Call", bar_whatsapp:"WhatsApp", bar_maps:"Location",
+  demo_whatsapp:"<b>On your real site:</b> this button opens WhatsApp straight to your gym's number, with the message already written.",
+  demo_call:"<b>On your real site:</b> this button calls your gym in one tap.",
+  demo_social:"<b>On your real site:</b> this opens your gym's page.",
+  wa_msg:"Hi, I saw the Iron House demo site and I want one like it for my gym",
+  lang:"العربية"
+}};
+
+let lang = "ar";
+const $ = s => document.querySelector(s);
+const t = k => T[lang][k] ?? k;
+const fmt = hm => { const [h] = hm.split(":").map(Number); const hh = h % 24; return lang === "ar" ? (hh===0?"12 م":hh<12?`${hh} ص`:`${hh===12?12:hh-12} م`) : (hh===0?"12 AM":hh<12?`${hh} AM`:`${hh===12?12:hh-12} PM`); };
+
+function render(){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-t]").forEach(el => el.innerHTML = t(el.dataset.t));
+  $("#langBtn").textContent = t("lang");
+  $("#yr").textContent = new Date().getFullYear();
+
+  // open now
+  const now = new Date(), d = now.getDay(), [o, c] = SITE.hours[d];
+  const mins = now.getHours()*60 + now.getMinutes(), toM = s => { const [h,m] = s.split(":").map(Number); return h*60+m; };
+  $("#openNow").textContent = (mins >= toM(o) && mins < toM(c)) ? t("open") : t("closed") + fmt(o);
+
+  $("#heroHours").innerHTML = [["hh_week","hh_week_v"],["hh_fri","hh_fri_v"],["hh_ladies","hh_ladies_v"]]
+    .map(([a,b]) => `<div class="chip">${t(a)} · <b>${t(b)}</b></div>`).join("");
+  $("#stats").innerHTML = [["60+","st1"],["6","st2"],["4.8★","st3"]].map(([n,k]) => `<div class="stat"><b>${n}</b><span>${t(k)}</span></div>`).join("");
+
+  const feats = { m1:["f_all","f_classes","f_plan"], m3:["f_all","f_classes","f_plan","f_inbody"], m6:["f_all","f_classes","f_plan","f_inbody","f_freeze"], m12:["f_all","f_classes","f_plan","f_inbody","f_freeze2","f_pt"] };
+  $("#plans").innerHTML = SITE.plans.map(p => `
+    <div class="plan ${p.hot?"hot":""}">${p.hot?`<span class="badge">${t("hot")}</span>`:""}
+      <h3>${t(p.id)}</h3>
+      <div class="price"><b>${p.price}</b><span>${t("jod")}</span></div>
+      <div class="per">${T[lang]["per_"+p.id] || ""}</div>
+      <ul>${feats[p.id].map(f => `<li>${t(f)}</li>`).join("")}</ul>
+      <a class="btn ${p.hot?"btn-lime":"btn-ghost"}" data-action="whatsapp" data-plan="${p.id}" href="#">${t("choose")}</a>
+    </div>`).join("");
+  $("#extras").innerHTML = [["ex1","ex1s","ex1p"],["ex2","ex2s","ex2p"]].map(([a,b,c]) => `<div class="extra"><div>${t(a)}<small>${t(b)}</small></div><b>${t(c)}</b></div>`).join("");
+  $("#ladiesTimes").innerHTML = [["lt1","lt1v"],["lt2","lt2v"]].map(([a,b]) => `<div class="t"><span>${t(a)}</span><b>${t(b)}</b></div>`).join("");
+
+  // schedule
+  const order = [6,0,1,2,3,4,5];
+  const sel = window.__day ?? (order.includes(d) ? d : 6);
+  $("#days").innerHTML = order.map(i => `<button type="button" class="day ${i===sel?"on":""}" data-day="${i}">${t("d"+i)}</button>`).join("");
+  $("#classes").innerHTML = (SITE.schedule[sel] || []).map(([tm, c, coach, w]) => `
+    <div class="cls"><time>${tm}</time><div><h4>${t(c)}</h4><small>${t(coach)}</small></div><span class="pill ${w?"w":""}">${t(w?"women":"mixed")}</span></div>`).join("");
+  document.querySelectorAll(".day").forEach(b => b.onclick = () => { window.__day = +b.dataset.day; render(); });
+
+  $("#gallery").innerHTML = [["weights","g_weights"],["cardio","g_cardio"],["studio","g_studio"]]
+    .map(([img,k]) => `<div class="ph" style="background-image:url('${SITE.images[img]}'),linear-gradient(135deg,#1d2a00,#111)"><span>${t(k)}</span></div>`).join("");
+  $("#amen").innerHTML = [["🔒","a1"],["🅿️","a2"],["❄️","a3"],["🥤","a4"]].map(([i,k]) => `<div class="am"><span class="ic">${i}</span>${t(k)}</div>`).join("");
+  $("#trainers").innerHTML = [["t1","t1s"],["t2","t2s"],["t3","t3s"]].map(([a,b]) => `<div class="tr"><div class="av">${t(a).replace(/^(كابتن|Coach)\s*/,"").charAt(0)}</div><div><h4>${t(a)}</h4><small>${t(b)}</small></div></div>`).join("");
+  $("#reviews").innerHTML = [["r1","r1n"],["r2","r2n"],["r3","r3n"]].map(([a,b]) => `<div class="rv"><div class="stars">★★★★★</div><p>${t(a)}</p><small>${t(b)}</small></div>`).join("");
+  $("#faq").innerHTML = [["q1","a1q"],["q2","a2q"],["q3","a3q"]].map(([q,a]) => `<details><summary>${t(q)}</summary><p>${t(a)}</p></details>`).join("");
+  $("#info").innerHTML = [["i_addr","i_addr_v"],["i_hours","i_hours_v"],["i_fri","i_fri_v"]].map(([a,b]) => `<div class="row"><span>${t(a)}</span><b>${t(b)}</b></div>`).join("")
+    + `<div class="row"><span>${t("i_phone")}</span><b dir="ltr">079 066 6498</b></div><a class="btn btn-lime" data-action="maps" href="#">${t("dir")}</a>`;
+  wire();
+}
+
+let toastTimer;
+function toast(html){ const el = $("#toast"); el.innerHTML = html; el.classList.add("show"); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove("show"), 4200); }
+
+function wire(){
+  document.querySelectorAll("[data-action]").forEach(a => {
+    const act = a.dataset.action;
+    a.onclick = null; a.removeAttribute("target");
+    if (act === "maps") { a.href = SITE.mapsUrl; a.target = "_blank"; a.rel = "noopener"; return; }
+    if (act === "whatsapp") { a.href = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(t("wa_msg"))}`; a.target = "_blank"; a.rel = "noopener"; return; }
+    if (act === "call") { a.href = `tel:${SITE.phone}`; return; }
+    if (!SITE.demo) { a.href = SITE[act] || "#"; a.target = "_blank"; a.rel = "noopener"; return; }
+    a.href = "#";
+    a.onclick = e => { e.preventDefault(); toast(t("demo_social")); };
+  });
+}
+
+$("#langBtn").onclick = () => { lang = lang === "ar" ? "en" : "ar"; render(); };
+render();
+</script>
+</body>
+</html>
